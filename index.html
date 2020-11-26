@@ -33,7 +33,7 @@
             </ul>
 
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginModal" href="#">
+                <a id="loginButton" href="#">
                     <span class="fa fa-sign-in"></span> Login
                 </a>
             </span>
@@ -45,13 +45,13 @@
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header myModalTitle">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close myModalCrossButton" data-dismiss="modal">
                         &times;
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body myModalBody">
                     <form>
                         <div class="form-row">
                             <div class="form-group col-sm-4">
@@ -85,13 +85,13 @@
     <div id="bookingModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header myModalTitle">
                     <h4 class="modal-title">Reserve a Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close myModalCrossButton" data-dismiss="modal">
                         &times;
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body myModalBody">
                     <form>
                         <div class="form-group row">
                             <label for="guests" class="col-12 col-sm-2 col-form-label">Number of Guests</label>
@@ -173,7 +173,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center"> 
-                    <a type="button" class="btn btn-block btn-warning" data-toggle="modal" data-target="#bookingModal" >
+                    <a type="button" class="btn btn-block btn-warning" id="reserveTableButton" >
                     Reserve Table
                     </a>
                 </div>
@@ -404,7 +404,14 @@
                     $("#carouselButton").children('span').addClass('fa-pause');                
                 }
             });
-        })
+
+            $("#reserveTableButton").click(function(){
+            $("#bookingModal").modal();
+            });
+            $("#loginButton").click(function(){
+            $("#loginModal").modal();
+            });
+        });
     </script>
 
 </body>

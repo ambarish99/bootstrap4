@@ -52,3 +52,12 @@ body {
   position: absolute;
   bottom: 0px;
   z-index: 1; }
+
+.myModalTitle {
+  background: #512DA8;
+  color: #ddd; }
+  .myModalTitle .myModalCrossButton {
+    color: #D1C4E9; }
+
+.myModalBody {
+  background: #D1C4E9; }

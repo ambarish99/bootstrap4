@@ -75,3 +75,14 @@ body{
     z-index: 1;
 }
 
+.myModalTitle {
+    background:$background-dark;
+    color: $lt-gray;
+    .myModalCrossButton{
+        color: $background-pale;
+    }
+}
+
+.myModalBody{
+    background: $background-pale;
+}
